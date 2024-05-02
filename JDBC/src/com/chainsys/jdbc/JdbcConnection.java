@@ -1,4 +1,4 @@
-package com.chainsys.jdbc;
+/*package com.chainsys.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,10 +8,10 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JdbcDemo {
+public class JdbcConnection {
 
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
-		String url = "jdbc:mysql://localhost:3306/demo3";
+		String url = "jdbc:mysql://localhost:3306/demo";
 		String userName = "root";
 		String password = "ajith123";
 		String query = "select * from product";
@@ -40,9 +40,7 @@ public class JdbcDemo {
 		update();
 		delete();
 		insert();
-
 	}
-
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 
 		Class.forName("com.mysql.cj.jdbc.Driver");
@@ -50,7 +48,6 @@ public class JdbcDemo {
 		return connection;
 
 	}
-
 	public static void update() throws ClassNotFoundException, SQLException {
 		Connection connection = getConnection();
 		String query = "update product set username='ajith' where product_id=13";
@@ -71,11 +68,18 @@ public class JdbcDemo {
 
 	public static void insert() throws ClassNotFoundException, SQLException {
 		Connection connection = getConnection();
-		String query = "insert into product values(1,'ajith',12654182,12,'apple',2,30,60)";
+		String query = "insert into product values(6,'ajith',12654182,12,'apple',2,30,60)";
 		PreparedStatement prepare = connection.prepareStatement(query);
 		System.out.println("inserted successfully");
 		prepare.execute();
 		connection.close();
 	}
 
+	
+	
+		
+	
+
+
 }
+*/
